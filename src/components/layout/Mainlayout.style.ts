@@ -22,7 +22,7 @@ const Bg = styled.div`
 `
 const Bg2 = styled.div`
 position: absolute;
-width: 1604.02px;
+width: 100%;
 height: 6824px;
 left: 0px;
 top: 0px;
