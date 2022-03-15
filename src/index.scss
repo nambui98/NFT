@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap');
+
+
+
+*,
+*::after,
+*::before{
+  padding: 0;
+  margin: 0;
+  box-sizing: inherit;
+}
+html{
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-family: 'Rajdhani', sans-serif;
+    overflow: hidden;
+  font-size: 1.6rem;
+  color: rgba(255, 255, 255, 0.6);
+}
+.color-white{
+  color:white;
+}
+.btn{
+  position: relative;
+  // border: none;
+  background-color:transparent;
+  border-radius: 0.3rem;
+  height: 6.4rem;
+  width: 25rem;
+  border: none;
+  // box-shadow: 0px 4.42184px 107.23px rgba(255, 86, 246, 0.51);
+  filter: drop-shadow(0px 4.42184px 107.23px rgba(255, 86, 246, 0.51));
+  font-size: 2rem;
+  color:#fff;
+  font-family: inherit;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  // transform: matrix(-1, 0, 0, 1, 0, 0);
+  clip-path: polygon(0 2rem, 4.5rem 0, 100% 0, 100% 4.4rem, 20.5rem 100%, 0 100%);
+  &::before{
+    content:"";
+    clip-path: polygon(0 0,20.5rem 0, 100% 2rem, 100% 100%,4.5rem 100%,0 4.4rem );
+    background-image: linear-gradient(90deg, rgba(59,172,226,1) 0%, rgba(64,106,255,1) 21%, rgba(185,54,238,1) 48%, rgba(255,86,246,1) 80%);
+    // display: inline-block;
+    width: 100%;
+    height: 100%;
+    transform: matrix(-1, 0, 0, 1, 0, 0);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
+}
