@@ -1,7 +1,11 @@
 import * as React from 'react';
 import Dot from '../components/common/dot/dot';
 import Next from '../assets/icons/next.svg?component'
-import { HomeWrapper, Content } from './Home.style';
+import Ethenium from '../assets/icons/ETH.svg?component'
+import img1 from '../assets/img/img_slider-1.png'
+import avatar from '../assets/img/avatar.png'
+import BgItem from '../assets/img/bg_item.svg?component'
+import { HomeWrapper, Content, SlidersWrapper, SliderImg } from './Home.style';
 import { Navigation, Pagination, Scrollbar, A11y, Autoplay } from 'swiper';
 
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -27,8 +31,35 @@ export function Home(props: IHomeProps) {
                     <button className="btn btn-text heading-bg">Create NFT's</button>
                 </div>
             </Content>
-            <div className="home__silder">
-                slider
+            <SlidersWrapper className="slider">
+                <div className="slider__item">
+                    <SliderImg image={img1}></SliderImg>
+                    <BgItem />
+                    <div className="slider__inforwrapper">
+                        <div className="slider__info">
+                            <div className="slider__left">
+                                <h3 className="heading-3">3D Abstract Hand</h3>
+                                <p className='slider__user'>
+                                    <img src={avatar} className='slider__avatar' alt="" />
+                                    @jhonartist
+                                </p>
+                                <p>Reserve price</p>
+                                <p className="slider__value"><Ethenium /> ETH 9.31 <span>($29,8846)</span></p>
+                            </div>
+                            <div className="slider__right">
+                                <p className='text'>
+                                    Auction Ends in
+                                </p>
+                                <ul className='slider__hour'>
+                                    <li>18 <span className='text'>Hours</span></li>
+                                    <li>25 <span className='text'>Mins</span></li>
+                                    <li>44 <span className='text'>Secs</span></li>
+                                </ul>
+                                <button className="btn">Place Bid <Next /></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 {/* <<Swiper
         id="main"
                     navigation
@@ -52,7 +83,7 @@ export function Home(props: IHomeProps) {
                         </SwiperSlide>
                     ))}
                 </Swiper> */}
-            </div>
+            </SlidersWrapper>
         </HomeWrapper>
     );
 }

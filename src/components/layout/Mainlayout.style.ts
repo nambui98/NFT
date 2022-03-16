@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import bg from '../../assets/img/bg.jpg'
 const MainlayoutWrapper = styled.div`
     background-color: #01204C;
-    height: 100vh;
+    /* height: 100vh; */
     padding: 4rem 10rem;
     & > *{
         backdrop-filter: blur(0);
