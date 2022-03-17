@@ -15,7 +15,9 @@ const Content = styled.div`
 const SlidersWrapper = styled.div`
     flex: 1;
     filter: drop-shadow(0px .4rem .2rem rgba(0, 0, 0, 0.25)) drop-shadow(0px .4rem .2rem rgba(0, 0, 0, 0.25)) drop-shadow(0px .4rem .2rem rgba(0, 0, 0, 0.25)) ;
-    border-radius: 17.6873px;
+    border-radius: 1.8rem;
+    display: flex;
+    justify-content: center;
     .slider{
        &__item{
            position: relative;
