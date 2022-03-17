@@ -43,19 +43,19 @@ export function Home(props: IHomeProps) {
                                     <img src={avatar} className='slider__avatar' alt="" />
                                     @jhonartist
                                 </p>
-                                <p>Reserve price</p>
-                                <p className="slider__value"><Ethenium /> ETH 9.31 <span>($29,8846)</span></p>
+                                <p className='text-2'>Reserve price</p>
+                                <p className="slider__value"><Ethenium /> ETH 9.31 <span className='slider__price'>($29,8846)</span></p>
                             </div>
                             <div className="slider__right">
-                                <p className='text'>
+                                <p className='text-2'>
                                     Auction Ends in
                                 </p>
                                 <ul className='slider__hour'>
-                                    <li>18 <span className='text'>Hours</span></li>
-                                    <li>25 <span className='text'>Mins</span></li>
-                                    <li>44 <span className='text'>Secs</span></li>
+                                    <li className='hour__item'>18 <span className='text-2'>Hours</span></li>
+                                    <li className='hour__item'>25 <span className='text-2'>Mins</span></li>
+                                    <li className='hour__item'>44 <span className='text-2'>Secs</span></li>
                                 </ul>
-                                <button className="btn">Place Bid <Next /></button>
+                                <button className="btn btn-primary mt-medium">Place Bid <Next /></button>
                             </div>
                         </div>
                     </div>

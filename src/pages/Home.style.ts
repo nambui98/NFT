@@ -26,47 +26,86 @@ const SlidersWrapper = styled.div`
            left: 14rem;
        }
        &__info{
-           position: relative;
-           height: 18.1rem;
-           width: 33.6rem;
-           background: linear-gradient(135deg, rgba(255, 255, 255, 0.18)  0%, rgba(255, 255, 255, 0)  100%);
-           backdrop-filter: blur(20px);
-           border-radius: 5px;
-           clip-path: polygon(0 4.5rem,  4.5rem 0, 100% 0, 100% 100%, 0 100%);
-           z-index: 0;
-           border-top-left-radius:55px;
-           color: #fff;
-
-           display: flex;
-           /* gap: 2rem; */
-        &::before {
-            content: "";
-            position: absolute;
-            top: .3rem;
-            left: .3rem;
-            height: 17.5rem;
-            width: 33rem;
-            z-index: 2;
-            background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) -1.52%, rgba(255, 255, 255, 0.024) 104.35%);
+            position: relative;
+            height: 18.1rem;
+            width: 33.6rem;
+            padding: 2.7rem 2.3rem;
+            backdrop-filter: blur(20px);
             border-radius: 5px;
-            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-            backdrop-filter: blur(80px);
-            -webkit-backdrop-filter: blur(60px);
-            border-top-left-radius:55px;
             clip-path: polygon(0 4.5rem,  4.5rem 0, 100% 0, 100% 100%, 0 100%);
-        }
+            z-index: 0;
+            border-top-left-radius:55px;
+            color: #fff;
+            background: rgba(255, 255, 255, 0.2);
+            display: flex;
+            /* align-items: center; */
+           
+            /* background: rgba(0, 0, 0, 0.1); */
+            backdrop-filter: blur(17px);
+            box-shadow: 10px 20px 50px rgb(0 0 0 / 40%);
+            &::before {
+                content: "";
+                position: absolute;
+                top: .3rem;
+                left: .3rem;
+                height: 17.5rem;
+                width: 33rem;
+                z-index: -1;
+                /* background: rgba(255, 255, 255, 0.1); */
+                background: rgba(0, 0, 0, 0.1);
+
+                border-radius: 5px;
+                box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+                backdrop-filter: blur(17px);
+                -webkit-backdrop-filter: blur(17px);
+                border-top-left-radius:55px;
+                clip-path: polygon(0 4.5rem,  4.5rem 0, 100% 0, 100% 100%, 0 100%);
+            }
        }
        &__avatar{
            width: 3rem;
            height: 3rem;
            /* object-fit: contain; */
            border-radius: 50%;
+           vertical-align: middle;
+           margin-right: 1rem;
+           
        }
        &__left{
-         flex: 0 0 50%;
+         flex: 0 0 55%;
        }
        &__right{
            flex: 1;
+           margin-left: 1rem;
+       }
+       &__user{
+           margin-top: .5rem;
+           margin-bottom: 1.5rem;
+       }
+       &__hour{
+           list-style: none;
+           display: flex;
+           justify-content: space-between;
+           margin-top: .5rem;
+           .hour__item{
+               text-align: center;
+               width: min-content;
+           }
+       }
+       &__value{
+            font-weight: 700;
+            font-size: 1.6rem;
+            margin-left: -5px;
+            margin-top: .5rem;
+            svg{
+                vertical-align: middle;
+                width: 3rem;
+                height: 3rem;
+            }
+       }
+       &__price{
+           font-size: 1.3rem;
+           font-weight: 400;
        }
     }
 `
