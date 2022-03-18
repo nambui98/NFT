@@ -9,7 +9,8 @@ const HeaderWrapper = styled.div`
         font-weight: 600;
         color: rgba(255, 255, 255, 0.6);;
         &__item{
-
+            cursor: pointer;
+            transition: all .2s;
             &:first-child,&:nth-child(4){
                 margin-right: auto;
             }
@@ -21,6 +22,9 @@ const HeaderWrapper = styled.div`
             }
             svg{
                 fill: #fff;
+            }
+            &:hover{
+                color: #fff;
             }
         }
         &__link:link,

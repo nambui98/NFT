@@ -5,7 +5,7 @@ import img1 from '../assets/img/img_slider-1.png'
 const HomeWrapper = styled.div`
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
     padding-top: 11.6rem;
     
 `
@@ -17,6 +17,8 @@ const SlidersWrapper = styled.div`
     filter: drop-shadow(0px .4rem .2rem rgba(0, 0, 0, 0.25)) drop-shadow(0px .4rem .2rem rgba(0, 0, 0, 0.25)) drop-shadow(0px .4rem .2rem rgba(0, 0, 0, 0.25)) ;
     border-radius: 1.8rem;
     display: flex;
+    width: 100%;
+    margin-left: 7rem;
     justify-content: center;
     .slider{
        &__item{
@@ -26,6 +28,7 @@ const SlidersWrapper = styled.div`
            position: absolute;
            bottom: -10rem;
            left: 14rem;
+           box-sizing: border-box;
        }
        &__info{
             position: relative;
@@ -115,12 +118,15 @@ const SliderImg: any = styled.div`
     /* display: inline-block; */
     width: 40rem;
     height: 47.7rem;
+    margin-bottom: 10rem;
     filter: url('#goo');
     &::before {
         content: "";
         display: block;
+        position: absolute;
+        inset: 0;
         padding-top: 100%;
-        height: 100%;
+        /* height: 100%; */
         background-image: url(${({ image }: any) => image});
         background-size: cover;
         background-repeat: no-repeat;
