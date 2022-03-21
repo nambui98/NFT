@@ -11,8 +11,11 @@ const HeaderWrapper = styled.div`
         &__item{
             cursor: pointer;
             transition: all .2s;
-            &:first-child,&:nth-child(4){
+            &:nth-child(4){
                 margin-right: auto;
+            }
+            &:first-child{
+                margin-right: 30rem;
             }
             &:nth-child(3){
                 margin: 0 7rem;

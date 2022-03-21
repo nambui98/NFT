@@ -17,7 +17,7 @@ export default function Mainlayout({ }: Props) {
                     <Outlet />
                 </div>
             </div>
-            {/* <Footer /> */}
+            <Footer />
         </MainlayoutWrapper>
     )
 }
