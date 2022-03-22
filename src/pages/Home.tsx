@@ -131,22 +131,22 @@ export function Home(props: IHomeProps) {
                             <div className="slider__item">
                                 <SliderImg image={img2}></SliderImg>
                                 <BgItem />
-                                <div className="slider__inforwrapper">
-                                    <div className="slider__info">
-                                        <div className="slider__left">
+                                <Detail>
+                                    <div className="infobg">
+                                        <div className="left">
                                             <h3 className="name">3D Abstract Hand</h3>
-                                            <p className='slider__user'>
-                                                <img src={avatar} className='slider__avatar' alt="" />
+                                            <p className='user'>
+                                                <img src={avatar} className='avatar' alt="" />
                                                 @jhonartist
                                             </p>
                                             <p className='text-2'>Reserve price</p>
-                                            <p className="slider__value"><Ethenium /> ETH 9.31 <span className='slider__price'>($29,8846)</span></p>
+                                            <p className="value"><Ethenium /> ETH 9.31 <span className='price'>($29,8846)</span></p>
                                         </div>
-                                        <div className="slider__right">
+                                        <div className="right">
                                             <p className='text-2'>
                                                 Auction Ends in
                                             </p>
-                                            <ul className='slider__hour'>
+                                            <ul className='hour'>
                                                 <li className='hour__item'>18 <span className='text-2'>Hours</span></li>
                                                 <li className='hour__item'>25 <span className='text-2'>Mins</span></li>
                                                 <li className='hour__item'>44 <span className='text-2'>Secs</span></li>
@@ -154,7 +154,7 @@ export function Home(props: IHomeProps) {
                                             <button className="btn btn-primary mt-medium">Place Bid <Next /></button>
                                         </div>
                                     </div>
-                                </div>
+                                </Detail>
                             </div>
                         </SwiperSlide>
                         <SwiperSlide>
@@ -162,22 +162,22 @@ export function Home(props: IHomeProps) {
                             <div className="slider__item">
                                 <SliderImg image={img3}></SliderImg>
                                 <BgItem />
-                                <div className="slider__inforwrapper">
-                                    <div className="slider__info">
-                                        <div className="slider__left">
+                                <Detail>
+                                    <div className="infobg">
+                                        <div className="left">
                                             <h3 className="name">3D Abstract Hand</h3>
-                                            <p className='slider__user'>
-                                                <img src={avatar} className='slider__avatar' alt="" />
+                                            <p className='user'>
+                                                <img src={avatar} className='avatar' alt="" />
                                                 @jhonartist
                                             </p>
                                             <p className='text-2'>Reserve price</p>
-                                            <p className="slider__value"><Ethenium /> ETH 9.31 <span className='slider__price'>($29,8846)</span></p>
+                                            <p className="value"><Ethenium /> ETH 9.31 <span className='price'>($29,8846)</span></p>
                                         </div>
-                                        <div className="slider__right">
+                                        <div className="right">
                                             <p className='text-2'>
                                                 Auction Ends in
                                             </p>
-                                            <ul className='slider__hour'>
+                                            <ul className='hour'>
                                                 <li className='hour__item'>18 <span className='text-2'>Hours</span></li>
                                                 <li className='hour__item'>25 <span className='text-2'>Mins</span></li>
                                                 <li className='hour__item'>44 <span className='text-2'>Secs</span></li>
@@ -185,7 +185,7 @@ export function Home(props: IHomeProps) {
                                             <button className="btn btn-primary mt-medium">Place Bid <Next /></button>
                                         </div>
                                     </div>
-                                </div>
+                                </Detail>
                             </div>
                         </SwiperSlide>
                         <SwiperSlide>
@@ -193,22 +193,22 @@ export function Home(props: IHomeProps) {
                             <div className="slider__item">
                                 <SliderImg image={img4}></SliderImg>
                                 <BgItem />
-                                <div className="slider__inforwrapper">
-                                    <div className="slider__info">
-                                        <div className="slider__left">
+                                <Detail>
+                                    <div className="infobg">
+                                        <div className="left">
                                             <h3 className="name">3D Abstract Hand</h3>
-                                            <p className='slider__user'>
-                                                <img src={avatar} className='slider__avatar' alt="" />
+                                            <p className='user'>
+                                                <img src={avatar} className='avatar' alt="" />
                                                 @jhonartist
                                             </p>
                                             <p className='text-2'>Reserve price</p>
-                                            <p className="slider__value"><Ethenium /> ETH 9.31 <span className='slider__price'>($29,8846)</span></p>
+                                            <p className="value"><Ethenium /> ETH 9.31 <span className='price'>($29,8846)</span></p>
                                         </div>
-                                        <div className="slider__right">
+                                        <div className="right">
                                             <p className='text-2'>
                                                 Auction Ends in
                                             </p>
-                                            <ul className='slider__hour'>
+                                            <ul className='hour'>
                                                 <li className='hour__item'>18 <span className='text-2'>Hours</span></li>
                                                 <li className='hour__item'>25 <span className='text-2'>Mins</span></li>
                                                 <li className='hour__item'>44 <span className='text-2'>Secs</span></li>
@@ -216,7 +216,7 @@ export function Home(props: IHomeProps) {
                                             <button className="btn btn-primary mt-medium">Place Bid <Next /></button>
                                         </div>
                                     </div>
-                                </div>
+                                </Detail>
                             </div>
                         </SwiperSlide>
                         <SwiperSlide>
@@ -224,22 +224,22 @@ export function Home(props: IHomeProps) {
                             <div className="slider__item">
                                 <SliderImg image={img5}></SliderImg>
                                 <BgItem />
-                                <div className="slider__inforwrapper">
-                                    <div className="slider__info">
-                                        <div className="slider__left">
+                                <Detail>
+                                    <div className="infobg">
+                                        <div className="left">
                                             <h3 className="name">3D Abstract Hand</h3>
-                                            <p className='slider__user'>
-                                                <img src={avatar} className='slider__avatar' alt="" />
+                                            <p className='user'>
+                                                <img src={avatar} className='avatar' alt="" />
                                                 @jhonartist
                                             </p>
                                             <p className='text-2'>Reserve price</p>
-                                            <p className="slider__value"><Ethenium /> ETH 9.31 <span className='slider__price'>($29,8846)</span></p>
+                                            <p className="value"><Ethenium /> ETH 9.31 <span className='price'>($29,8846)</span></p>
                                         </div>
-                                        <div className="slider__right">
+                                        <div className="right">
                                             <p className='text-2'>
                                                 Auction Ends in
                                             </p>
-                                            <ul className='slider__hour'>
+                                            <ul className='hour'>
                                                 <li className='hour__item'>18 <span className='text-2'>Hours</span></li>
                                                 <li className='hour__item'>25 <span className='text-2'>Mins</span></li>
                                                 <li className='hour__item'>44 <span className='text-2'>Secs</span></li>
@@ -247,7 +247,7 @@ export function Home(props: IHomeProps) {
                                             <button className="btn btn-primary mt-medium">Place Bid <Next /></button>
                                         </div>
                                     </div>
-                                </div>
+                                </Detail>
                             </div>
                         </SwiperSlide>
                     </Swiper>
