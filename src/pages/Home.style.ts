@@ -68,8 +68,12 @@ const SlidersWrapper = styled.div`
     @media only screen and (max-width: ${bpSmallest}) {
         margin-left: 0rem;
         margin-top: 5rem;
+        .swiper{
+            width: 100%;
+        }
     }
     .slider{
+        
        &__item{
            position: relative;
        }
@@ -328,9 +332,6 @@ const SliderImg: any = styled.div`
         background-repeat: no-repeat;
         background-position: center;
         clip-path: polygon(0 6rem,  10rem 0, 100% 0, 100% 100%, 0 100%);
-        @media only screen and (max-width: ${bpSmallest}) {
-            background-size: contain;
-        }
     }
 `
 const PartnerWapper = styled.div`
