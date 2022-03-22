@@ -31,6 +31,7 @@ import { HomeWrapper, Content, SlidersWrapper, SliderImg, BannerWrapper, Partner
 import { Autoplay, EffectFade, Grid } from 'swiper';
 import { Swiper, SwiperSlide, } from 'swiper/react';
 import 'swiper/css';
+import "swiper/css/bundle";
 import 'swiper/css/autoplay';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
@@ -254,8 +255,9 @@ export function Home(props: IHomeProps) {
                 </SlidersWrapper>
                 <PartnerWapper>
                     <Swiper
-                        modules={[Autoplay, Grid, EffectFade]}
+                        modules={[Grid, Autoplay, EffectFade]}
                         // grabCursor={true}
+                        className="multirow"
                         slidesPerView={4}
                         spaceBetween={100}
                         onSlideChange={() => console.log('slide change')}
@@ -270,7 +272,6 @@ export function Home(props: IHomeProps) {
                                 320: {
                                     slidesPerView: 2,
                                     spaceBetween: 20,
-
                                 },
 
                                 // when window width is >= 640px
