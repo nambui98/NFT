@@ -658,7 +658,7 @@ const WhatIsNFT = styled.div`
         @media only screen and (max-width: ${bpMedium}) {
             width: 33.5rem;
             /* left: 0rem; */
-            right: calc(50% + 1.25rem);
+            right: calc(50% + 0.625rem);
             transform: translateX(50%);
         }
         .content{
