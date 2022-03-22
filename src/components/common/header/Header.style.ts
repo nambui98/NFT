@@ -15,6 +15,7 @@ const HeaderWrapper = styled.div`
         /* right: 5rem; */
         /* left: 5rem; */
         z-index: 2000000;
+        pointer-events: none;
     }
     .nav{
         list-style: none;

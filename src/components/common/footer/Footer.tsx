@@ -63,10 +63,10 @@ export default function Footer({ }: Props) {
             <div className={`column ${active == 2 && 'active'}`} onClick={() => {
 
                 setActive((prevState: number | null | undefined) => {
-                    if (prevState === 1) {
+                    if (prevState === 2) {
                         return null
                     }
-                    return 1
+                    return 2
                 })
             }}>
                 <h4 className="text-3 dropdown">Collectibles<ChevronDown stroke='rgba(255, 255, 255, 0.54)' strokeWidth={4} size={12} /></h4>
@@ -91,10 +91,10 @@ export default function Footer({ }: Props) {
             <div className={`column ${active == 3 && 'active'}`} onClick={() => {
 
                 setActive((prevState: number | null | undefined) => {
-                    if (prevState === 1) {
+                    if (prevState === 3) {
                         return null
                     }
-                    return 1
+                    return 3
                 })
             }}>
                 <h4 className="text-3 dropdown">Support<ChevronDown stroke='rgba(255, 255, 255, 0.54)' strokeWidth={4} size={12} /></h4>
@@ -119,10 +119,10 @@ export default function Footer({ }: Props) {
             <div className={`column ${active == 4 && 'active'}`} onClick={() => {
 
                 setActive((prevState: number | null | undefined) => {
-                    if (prevState === 1) {
+                    if (prevState === 4) {
                         return null
                     }
-                    return 1
+                    return 4
                 })
             }}>
                 <h4 className="text-3 dropdown">Legal<ChevronDown stroke='rgba(255, 255, 255, 0.54)' strokeWidth={4} size={12} /></h4>
@@ -147,10 +147,10 @@ export default function Footer({ }: Props) {
             <div className={`column ${active == 5 && 'active'}`} onClick={() => {
 
                 setActive((prevState: number | null | undefined) => {
-                    if (prevState === 1) {
+                    if (prevState === 5) {
                         return null
                     }
-                    return 1
+                    return 5
                 })
             }}>
                 <h4 className="text-3 dropdown">Follow us <ChevronDown stroke='rgba(255, 255, 255, 0.54)' strokeWidth={4} size={12} /></h4>
