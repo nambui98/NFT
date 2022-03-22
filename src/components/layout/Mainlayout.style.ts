@@ -10,6 +10,7 @@ const MainlayoutWrapper = styled.div`
     height: auto;
     padding: 4rem 10rem;
     position: relative;
+    overflow: hidden;
     @media only screen and (max-width: ${bpLarge}) {
         padding: 2rem 5rem;
     }

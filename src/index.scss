@@ -18,6 +18,9 @@ $bp-Smallest : 31.25em; //500px
   margin: 0;
   box-sizing: inherit;
 }
+* {
+  -webkit-tap-highlight-color: transparent;
+}
 html{
   font-size: 62.5%;
   box-sizing: border-box;
