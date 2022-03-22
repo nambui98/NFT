@@ -90,10 +90,10 @@ export function Home(props: IHomeProps) {
                         slidesPerView={1}
                         onSlideChange={() => console.log('slide change')}
                         onSwiper={(swiper) => console.log(swiper)}
-                    // autoplay={{
-                    //     delay: 2500,
-                    //     disableOnInteraction: false,
-                    // }}
+                        autoplay={{
+                            delay: 2500,
+                            disableOnInteraction: false,
+                        }}
                     >
                         <SwiperSlide>
                             <div className="slider__item">
