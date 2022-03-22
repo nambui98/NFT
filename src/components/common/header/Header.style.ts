@@ -9,9 +9,12 @@ const bpLargest = '75em',//1200px
 const HeaderWrapper = styled.div`
     @media only screen and (max-width: ${bpMedium}) {
         position: fixed;
-        right: 5rem;
-        left: 5rem;
-        z-index: 2;
+        inset: 0;
+        width: 100vw;
+        padding: 3rem 5rem;
+        /* right: 5rem; */
+        /* left: 5rem; */
+        z-index: 2000000;
     }
     .nav{
         list-style: none;
