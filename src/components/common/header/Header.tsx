@@ -29,7 +29,35 @@ export default function Header({ }: Props) {
                 <li className="nav__item">
                     <Link to="#" className='nav__link'><User /></Link>
                 </li>
+                {/* <div className='nav--mobile'> */}
+                <input type="checkbox" name="check" id="check" />
+                <label htmlFor="check" className="humberger__button" >
+                    <span className="humberger__icon">&nbsp;</span>
+                </label>
+                {/* </div> */}
+                <ul className='nav--mobile'>
+                    <li className="nav--mobile__item">
+                        <Link to="#" className='nav--mobile__link btn-primary fontThree'>Market</Link>
+                    </li>
+                    <li className="nav--mobile__item">
+                        <Link to="#" className='nav--mobile__link btn-primary fontThree'>Features</Link>
+                    </li>
+                    <li className="nav--mobile__item">
+                        <Link to="#" className='nav--mobile__link btn-primary fontThree'>Community</Link>
+                    </li>
+                    <div className="group-btn">
+
+
+                        <li className="nav--mobile__item">
+                            <Link to="#" className='btn-text'><Cart /></Link>
+                        </li>
+                        <li className="nav--mobile__item">
+                            <Link to="#" className='btn-text'><User /></Link>
+                        </li>
+                    </div>
+                </ul>
             </ul>
+
         </HeaderWrapper>
     )
 }

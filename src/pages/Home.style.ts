@@ -1,14 +1,23 @@
 import styled, { StyledComponent } from 'styled-components';
 import bgwhatisNFT from '../assets/img/bgwhatisNFT.jpg';
-
+const bpLargest = '75em',//1200px
+    bpLarge = '68.75em', //1100px
+    bpMedium = '56.25em', //900px
+    bpSmall = '48em', //768px
+    bpSmallest = '41.25em'; //660px
 const HomeWrapper = styled.div`
 `
 const BannerWrapper = styled.div`
-    display: flex;
+    /* display: flex;
     justify-content: space-between;
-    align-items: flex-start;
+    align-items: flex-start; */
     padding-top: 11.6rem;
     position: relative;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(50%, 1fr));
+    @media only screen and (max-width: ${bpSmallest}) {
+        grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
+    }
     .imgbanner{
         position: absolute;
         top: 60%;
@@ -18,10 +27,16 @@ const BannerWrapper = styled.div`
 `
 const Content = styled.div`
     flex: 0 0 60%;
+    @media only screen and (max-width: ${bpSmall}) {
+        flex: 0 0 50%;
+    }
     .content{
         &__bottom{
             margin-top: 7rem;
             display: flex;
+            @media only screen and (max-width: ${bpSmallest}) {
+                justify-content: space-between;
+            }
         }
         &__item{
             line-height: 1;
@@ -47,6 +62,13 @@ const SlidersWrapper = styled.div`
     width: 100%;
     margin-left: 7rem;
     justify-content: center;
+    @media only screen and (max-width: ${bpLarge}) {
+        margin-left: 2rem;
+    }
+    @media only screen and (max-width: ${bpSmallest}) {
+        margin-left: 0rem;
+        margin-top: 5rem;
+    }
     .slider{
        &__item{
            position: relative;
@@ -67,6 +89,7 @@ const SlidersWrapper = styled.div`
             clip-path: polygon(0 4.5rem,  4.5rem 0, 100% 0, 100% 100%, 0 100%);
             z-index: 0;
             border-top-left-radius:55px;
+
             color: #fff;
             background: rgba(255, 255, 255, 0.2);
             display: flex;
@@ -98,7 +121,7 @@ const SlidersWrapper = styled.div`
            border-radius: 50%;
            vertical-align: middle;
            margin-right: 1rem;
-           
+
        }
        &__left{
          flex: 0 0 55%;
@@ -147,6 +170,17 @@ const Detail: StyledComponent<"div", any, {
     bottom: -10rem;
     left: 14rem;
     box-sizing: border-box;
+    @media only screen and (max-width: ${bpLargest}) {
+        bottom: -10rem;
+        left: 5rem;
+    }
+    @media only screen and (max-width: ${bpLarge}) {
+        bottom: -10rem;
+        left: 0rem;
+    }
+    @media only screen and (max-width: ${bpSmallest}) {
+        right: 0;
+    }
     .infobg{
         position: relative;
         height: 18.1rem;
@@ -154,10 +188,24 @@ const Detail: StyledComponent<"div", any, {
         padding: 2.7rem 2.3rem;
         backdrop-filter: blur(20px);
         border-radius: 5px;
+        @media only screen and (max-width: ${bpLargest}) {
+            width: ${({ width }: any) => width || '31rem'};
+            padding: 2.4rem 2rem;
+            height: 17.1rem;
+        }
+        @media only screen and (max-width: ${bpLarge}) {
+            width: ${({ width }: any) => width || '32rem'};
+        }
+        @media only screen and (max-width: ${bpSmallest}) {
+            width: 100%;
+        }
         ${({ inCard }: any) => !inCard &&
         `
                 clip-path: polygon(0 4.5rem,  4.5rem 0, 100% 0, 100% 100%, 0 100%);
                 border-top-left-radius:55px;
+                @media only screen and (max-width: ${bpLarge}) {
+                    border-top-left-radius:0;
+                }
             `
     };
         
@@ -181,10 +229,24 @@ const Detail: StyledComponent<"div", any, {
             box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
             backdrop-filter: blur(17px);
             -webkit-backdrop-filter: blur(17px);
-            
+            @media only screen and (max-width: ${bpLargest}) {
+                width: ${({ width }: any) => (width && `calc(${width} - 0.6rem)`) || '30.4rem'};;
+                padding: 2.4rem 2rem;
+                height: 16.5rem;
+            }
+            @media only screen and (max-width: ${bpLarge}) {
+                width: ${({ width }: any) => width || '31.4rem'};
+            }
+            @media only screen and (max-width: ${bpSmallest}) {
+                width: calc(100% - 0.6rem);
+            }
             ${({ inCard }: any) => !inCard && `
                 border-top-left-radius:55px;
-                clip-path: polygon(0 4.5rem,  4.5rem 0, 100% 0, 100% 100%, 0 100%);`
+                clip-path: polygon(0 4.5rem,  4.5rem 0, 100% 0, 100% 100%, 0 100%);
+                @media only screen and (max-width: ${bpLarge}) {
+                    border-top-left-radius:0;
+                }
+                `
     };
         }
     }
@@ -238,27 +300,43 @@ const Detail: StyledComponent<"div", any, {
     
 `
 const SliderImg: any = styled.div`
-    /* display: inline-block; */
+    display: block;
     width: 40rem;
     height: 47.7rem;
     margin-bottom: 10rem;
+    
     filter: url('#goo');
+    @media only screen and (max-width: ${bpLargest}) {
+        width: 32rem;
+        height: 37.7rem;
+    }
+    @media only screen and (max-width: ${bpSmallest}) {
+        width: 100%;
+        
+        /* height: max-content; */
+    }
     &::before {
         content: "";
         display: block;
         position: absolute;
         inset: 0;
         padding-top: 100%;
+        width: 100%;
         /* height: 100%; */
         background-image: url(${({ image }: any) => image});
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center;
         clip-path: polygon(0 6rem,  10rem 0, 100% 0, 100% 100%, 0 100%);
+        @media only screen and (max-width: ${bpSmallest}) {
+            background-size: contain;
+        }
     }
 `
 const PartnerWapper = styled.div`
     margin-top: 8rem;
+    grid-column: 1/-1;
+    grid-row: 2/3;
 `
 const PartnerItem = styled.div`
     display: flex;
@@ -291,8 +369,18 @@ const Explore = styled.div`
     display: flex;
     color: #fff;
     gap: 13rem;
+    @media only screen and (max-width: ${bpSmallest}) {
+        flex-direction: column;
+    }
+    @media only screen and (max-width: ${bpMedium}) {
+        gap: 5rem;
+    }
+    @media only screen and (max-width: ${bpLarge}) {
+        gap: 8rem;
+    }
     .left{
         flex: 0 0 60%;
+
     }
     .list{
         list-style: none;
@@ -310,7 +398,9 @@ const Explore = styled.div`
         font-size: 2.6rem;
         font-weight: 700;
         color: rgba(255, 255, 255, .5);
-        /* transition: all .3s; */
+        @media only screen and (max-width: ${bpSmall}) {
+            padding: 2rem 0;
+        }
         &::before{
             content: "";
             position: absolute;
@@ -337,10 +427,21 @@ const Explore = styled.div`
     }
     .right{
         flex:1;
+        @media only screen and (max-width: ${bpSmallest}) {
+            align-self: center;
+        }
     }
     .img{
         width: 40rem;
         transform: translateY(-3rem);
+        @media only screen and (max-width: ${bpSmall}) {
+            width: 30rem;
+             transform: translateY(0rem);
+        }
+        @media only screen and (max-width: ${bpSmallest}) {
+            margin-top: -10rem;
+        }
+        
     }
 `
 const HeadingSection = styled.div`
@@ -427,6 +528,9 @@ const Topseller = styled.div`
         width: 50%;
         margin-left: auto;
         margin-right: auto;
+        @media only screen and (max-width: ${bpSmall}) {
+            width: 100%;
+        }
     }
     .sellers__btn{
         margin-top: 6rem;
@@ -539,7 +643,10 @@ const WhatIsNFT = styled.div`
     position: relative;
     width: 100vw;
     height: 55.7rem;
-
+    @media only screen and (max-width: ${bpMedium}) {
+        height: 30rem;
+        margin-left: -5rem;
+    }
     .card{
         max-width: 58rem;
         position: absolute;
@@ -547,17 +654,32 @@ const WhatIsNFT = styled.div`
         bottom: -10rem;
         z-index: 1;
         border: 2px solid rgba(255, 255, 255, .3);
+        @media only screen and (max-width: ${bpMedium}) {
+            width: 33.5rem;
+            /* left: 0rem; */
+            right: calc(50% + 1.25rem);
+            transform: translateX(50%);
+        }
         .content{
             padding: 6rem 7rem;
             text-align: left;
+            @media only screen and (max-width: ${bpMedium}) {
+                padding: 3rem 3rem;
+            }
         }
         .heading{
             font-size: 4.4rem;
             font-weight: 800;
             margin-bottom: 1.7rem;
+            @media only screen and (max-width: ${bpMedium}) {
+                font-size: 2.5rem;
+            }
         }
         .text-3{
             font-weight: 400;
+            @media only screen and (max-width: ${bpMedium}) {
+                font-size: 1.5rem;
+            }
         }
         .group-btn{
             font-family: inherit;
@@ -584,6 +706,9 @@ const Subscribe = styled.div`
     gap: 7rem;
     color: #fff;
     border-bottom: 1px solid rgba(255, 255, 255, .2);
+    @media only screen and (max-width: ${bpMedium}) {
+        flex-direction: column-reverse;
+    }
     .wrapperimg{
         flex: 0 0 50%;
     }
@@ -594,6 +719,7 @@ const Subscribe = styled.div`
         border-radius: 5px;
     }
     .content{
+        
         .heading-2{
             font-family: 'Orbitron',sans-serif;
         }

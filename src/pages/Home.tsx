@@ -28,13 +28,14 @@ import Imgbanner from '../assets/img/imgbanner.svg?component'
 
 import BgItem from '../assets/img/bg_item.svg?component'
 import { HomeWrapper, Content, SlidersWrapper, SliderImg, BannerWrapper, PartnerWapper, PartnerItem, TopNFTWrapper, TopItem, Detail, Explore, HeadingSection, ExploreList, Collection, Topseller, ListSeller, Seller, WhatIsNFT, Subscribe } from './Home.style';
-import { Autoplay, EffectFade } from 'swiper';
+import { Autoplay, EffectFade, Grid } from 'swiper';
 import { Swiper, SwiperSlide, } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/autoplay';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 import "swiper/css/effect-fade";
+import "swiper/css/grid";
 // @ts-ignore
 import { ChevronDown, TriangleRight } from 'akar-icons';
 export interface IHomeProps {
@@ -251,46 +252,64 @@ export function Home(props: IHomeProps) {
                         </SwiperSlide>
                     </Swiper>
                 </SlidersWrapper>
+                <PartnerWapper>
+                    <Swiper
+                        modules={[Autoplay, Grid, EffectFade]}
+                        // grabCursor={true}
+                        slidesPerView={4}
+                        spaceBetween={100}
+                        onSlideChange={() => console.log('slide change')}
+                        onSwiper={(swiper) => console.log(swiper)}
+                        autoplay={{
+                            delay: 2500,
+                            disableOnInteraction: false,
+                        }}
+                        breakpoints={
+                            {
+                                // when window width is >= 320px
+                                320: {
+                                    slidesPerView: 2,
+                                    spaceBetween: 20,
+
+                                },
+
+                                // when window width is >= 640px
+                                660: {
+                                    slidesPerView: 4,
+                                    spaceBetween: 40
+                                }
+                            }
+                        }
+
+                    >
+                        <SwiperSlide>
+
+                            <PartnerItem>
+                                <Partnerimg1 fill='#fff' fillOpacity=".5" />
+                            </PartnerItem>
+                        </SwiperSlide>
+                        <SwiperSlide>
+
+                            <PartnerItem>
+                                <Partnerimg2 fill='#fff' fillOpacity=".5" />
+                            </PartnerItem>
+                        </SwiperSlide>
+                        <SwiperSlide>
+
+                            <PartnerItem>
+                                <Partnerimg3 fill='#fff' fillOpacity=".5" />
+                            </PartnerItem>
+                        </SwiperSlide>
+                        <SwiperSlide>
+
+                            <PartnerItem>
+                                <Partnerimg4 fill='#fff' fillOpacity=".5" />
+                            </PartnerItem>
+                        </SwiperSlide>
+                    </Swiper>
+                </PartnerWapper>
             </BannerWrapper>
-            <PartnerWapper>
-                <Swiper
-                    modules={[Autoplay, EffectFade]}
-                    grabCursor={true}
-                    slidesPerView={4}
-                    spaceBetween={100}
-                    onSlideChange={() => console.log('slide change')}
-                    onSwiper={(swiper) => console.log(swiper)}
-                    autoplay={{
-                        delay: 2500,
-                        disableOnInteraction: false,
-                    }}
-                >
-                    <SwiperSlide>
 
-                        <PartnerItem>
-                            <Partnerimg1 fill='#fff' fillOpacity=".5" />
-                        </PartnerItem>
-                    </SwiperSlide>
-                    <SwiperSlide>
-
-                        <PartnerItem>
-                            <Partnerimg2 fill='#fff' fillOpacity=".5" />
-                        </PartnerItem>
-                    </SwiperSlide>
-                    <SwiperSlide>
-
-                        <PartnerItem>
-                            <Partnerimg3 fill='#fff' fillOpacity=".5" />
-                        </PartnerItem>
-                    </SwiperSlide>
-                    <SwiperSlide>
-
-                        <PartnerItem>
-                            <Partnerimg4 fill='#fff' fillOpacity=".5" />
-                        </PartnerItem>
-                    </SwiperSlide>
-                </Swiper>
-            </PartnerWapper>
             <TopNFTWrapper>
                 <HeadingSection className='heading-section'>
                     <div className="heading-3">Top NFT’s now</div>
@@ -310,6 +329,25 @@ export function Home(props: IHomeProps) {
                         delay: 2500,
                         disableOnInteraction: false,
                     }}
+                    breakpoints={
+                        {
+                            // when window width is >= 320px
+                            320: {
+                                slidesPerView: 1,
+                                spaceBetween: 20,
+
+                            },
+                            660: {
+                                slidesPerView: 2,
+                                spaceBetween: 25
+                            },
+                            // when window width is >= 640px
+                            1000: {
+                                slidesPerView: 3,
+                                spaceBetween: 35
+                            }
+                        }
+                    }
                 >
                     <SwiperSlide>
 
@@ -465,6 +503,25 @@ export function Home(props: IHomeProps) {
                         delay: 2500,
                         disableOnInteraction: false,
                     }}
+                    breakpoints={
+                        {
+                            // when window width is >= 320px
+                            320: {
+                                slidesPerView: 1,
+                                spaceBetween: 20,
+
+                            },
+                            660: {
+                                slidesPerView: 2,
+                                spaceBetween: 25
+                            },
+                            // when window width is >= 640px
+                            1000: {
+                                slidesPerView: 3,
+                                spaceBetween: 35
+                            }
+                        }
+                    }
                 >
                     <SwiperSlide>
                         <Collection>

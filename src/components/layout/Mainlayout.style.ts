@@ -1,10 +1,19 @@
 import styled from 'styled-components';
-import bg from '../../assets/img/bg.jpg'
+import bg from '../../assets/img/bg.jpg';
+const bpLargest = '75em',//1200
+    bpLarge = '68.75em', //1100
+    bpMedium = '48em', //900
+    bpSmall = '37.5em', //600px
+    bpSmallest = '41.25em'; //660px
 const MainlayoutWrapper = styled.div`
     background-color: #01204C;
     height: auto;
     padding: 4rem 10rem;
     position: relative;
+    @media only screen and (max-width: ${bpLarge}) {
+        padding: 2rem 5rem;
+    }
+    
     & > *{
         backdrop-filter: blur(0);
     }

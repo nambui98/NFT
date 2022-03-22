@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { FooterWrapper } from './Footer.style'
 import logo from '../../../assets/icons/logo.svg'
 import { Link } from 'react-router-dom'
@@ -6,13 +6,15 @@ import Social1 from '../../../assets/icons/social1.svg?component'
 import Social2 from '../../../assets/icons/social2.svg?component'
 import Social3 from '../../../assets/icons/social3.svg?component'
 import Social4 from '../../../assets/icons/social4.svg?component'
+import { ChevronDown } from 'akar-icons'
 
 type Props = {}
 
 export default function Footer({ }: Props) {
+    const [active, setActive] = useState<number | null | undefined>(null)
     return (
         <FooterWrapper>
-            <div className="column">
+            <div className='column'>
                 <Link to="#" className='link'><img className='img' width={18} src={logo} alt="" /><span className='color-white text-3 fontThree'>OceanNFT</span></Link>
                 <p className='text'>Lorem ipsum dolor amet, consectetur adipiscing elit. Eget nisl nunc quam ac sed turpis volutpat. Cursus sed massa non nisi, placerat.</p>
                 <div className="listsocial">
@@ -30,8 +32,16 @@ export default function Footer({ }: Props) {
                     </button>
                 </div>
             </div>
-            <div className="column">
-                <h4 className="text-3">Market place</h4>
+            <div className={`column ${active == 1 && 'active'}`} onClick={() => {
+
+                setActive((prevState: number | null | undefined) => {
+                    if (prevState === 1) {
+                        return null
+                    }
+                    return 1
+                })
+            }}>
+                <h4 className="text-3 dropdown">Market place <ChevronDown stroke='rgba(255, 255, 255, 0.54)' strokeWidth={4} size={12} /></h4>
                 <ul>
                     <li>
                         Overview
@@ -50,8 +60,16 @@ export default function Footer({ }: Props) {
                     </li>
                 </ul>
             </div>
-            <div className="column">
-                <h4 className="text-3">Collectibles</h4>
+            <div className={`column ${active == 2 && 'active'}`} onClick={() => {
+
+                setActive((prevState: number | null | undefined) => {
+                    if (prevState === 1) {
+                        return null
+                    }
+                    return 1
+                })
+            }}>
+                <h4 className="text-3 dropdown">Collectibles<ChevronDown stroke='rgba(255, 255, 255, 0.54)' strokeWidth={4} size={12} /></h4>
                 <ul>
                     <li>
                         About
@@ -70,8 +88,16 @@ export default function Footer({ }: Props) {
                     </li>
                 </ul>
             </div>
-            <div className="column">
-                <h4 className="text-3">Support</h4>
+            <div className={`column ${active == 3 && 'active'}`} onClick={() => {
+
+                setActive((prevState: number | null | undefined) => {
+                    if (prevState === 1) {
+                        return null
+                    }
+                    return 1
+                })
+            }}>
+                <h4 className="text-3 dropdown">Support<ChevronDown stroke='rgba(255, 255, 255, 0.54)' strokeWidth={4} size={12} /></h4>
                 <ul>
                     <li>
                         Help Center
@@ -90,8 +116,16 @@ export default function Footer({ }: Props) {
                     </li>
                 </ul>
             </div>
-            <div className="column">
-                <h4 className="text-3">Legal</h4>
+            <div className={`column ${active == 4 && 'active'}`} onClick={() => {
+
+                setActive((prevState: number | null | undefined) => {
+                    if (prevState === 1) {
+                        return null
+                    }
+                    return 1
+                })
+            }}>
+                <h4 className="text-3 dropdown">Legal<ChevronDown stroke='rgba(255, 255, 255, 0.54)' strokeWidth={4} size={12} /></h4>
                 <ul>
                     <li>
                         Cookies Policy
@@ -110,8 +144,16 @@ export default function Footer({ }: Props) {
                     </li>
                 </ul>
             </div>
-            <div className="column">
-                <h4 className="text-3">Follow us</h4>
+            <div className={`column ${active == 5 && 'active'}`} onClick={() => {
+
+                setActive((prevState: number | null | undefined) => {
+                    if (prevState === 1) {
+                        return null
+                    }
+                    return 1
+                })
+            }}>
+                <h4 className="text-3 dropdown">Follow us <ChevronDown stroke='rgba(255, 255, 255, 0.54)' strokeWidth={4} size={12} /></h4>
                 <ul>
                     <li>
                         Facebook
