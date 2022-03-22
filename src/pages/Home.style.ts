@@ -29,6 +29,9 @@ const Content = styled.div`
     flex: 0 0 60%;
     @media only screen and (max-width: ${bpSmall}) {
         flex: 0 0 50%;
+        .group-btn{
+            display: flex;
+        }
     }
     .content{
         &__bottom{
@@ -52,6 +55,7 @@ const Content = styled.div`
                 border-left: 1px solid rgba(255, 255, 255, 0.26);
             }
         }
+        
     }
 `
 const SlidersWrapper = styled.div`
@@ -401,6 +405,7 @@ const Explore = styled.div`
         color: rgba(255, 255, 255, .5);
         @media only screen and (max-width: ${bpSmall}) {
             padding: 2rem 0;
+            font-size: 2rem;
         }
         &::before{
             content: "";
@@ -584,7 +589,10 @@ const Seller = styled.div`
     }
     .index,.username{
         font-weight: 700;
-         font-size: 2rem;
+        font-size: 2rem;
+        @media only screen and (max-width: ${bpSmallest}) {
+            font-size: 1.4rem;
+        }
     }
     .ether{
         font-size: 1.4rem;
@@ -600,7 +608,7 @@ const Seller = styled.div`
         width: 10rem;
         border-radius: 18px;
         position: relative;
-        
+
         font-weight: 500;
         font-size: 1.5rem;
         line-height: 1;
@@ -613,7 +621,7 @@ const Seller = styled.div`
             inset: 0; //top, right, left, botton: 0;
             padding: 2px;
             border-radius: 3rem;
-           
+
             -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
             -webkit-mask-composite: xor;
             mask-composite: exclude;
@@ -633,7 +641,7 @@ const Seller = styled.div`
             }
         }
     }
-    
+
 `
 const WhatIsNFT = styled.div`
     background-image: url(${bgwhatisNFT});
