@@ -49,13 +49,16 @@ const FooterWrapper = styled.div`
             cursor: pointer;
         }
         &.active{
-            ul{
-                height: 100%;
-                opacity: 1;
-                transform: translateY(1.8rem);
-                margin-bottom: 1.8rem;
+            @media only screen and (max-width: ${bpMedium}) {
+
+                ul{
+                    height: 100%;
+                    opacity: 1;
+                    transform: translateY(1.8rem);
+                    margin-bottom: 1.8rem;
+                }
             }
-            
+
         }
     }
     .copyright{
