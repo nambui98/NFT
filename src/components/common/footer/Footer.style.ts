@@ -49,6 +49,7 @@ const FooterWrapper = styled.div`
             cursor: pointer;
         }
         &.active{
+            cursor: pointer;
             @media only screen and (max-width: ${bpMedium}) {
 
                 ul{
