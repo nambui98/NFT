@@ -553,7 +553,7 @@ const Topseller = styled.div`
 `
 const ListSeller = styled.div`
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(40rem,1fr));
+    grid-template-columns: repeat(auto-fit, minmax(35rem,1fr));
     gap: 3.5rem;
     margin-top: 4rem;
    
